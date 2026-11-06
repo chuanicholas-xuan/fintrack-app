@@ -4,12 +4,33 @@ A personal finance app for Android, iOS and the web that syncs across devices. I
 
 > The source code is private. This repo holds the description, download links and releases.
 
+## ✨ Vibe coded
+
+FinTrack is a **vibe-coded** app: I built it by directing an AI coding agent ([Claude Code](https://claude.com/claude-code)) rather than typing most of the code myself. My job was the product: deciding what to build, writing the requirements, reviewing the agent's work, testing every feature on a real phone and in the browser, and making the calls when things went wrong.
+
+**From idea to a shipped app in about 10 weeks** (Aug 22 – Nov 3, 2026):
+
+| | |
+|---|---|
+| Lines of TypeScript | ~37,000 |
+| Commits | 38 (33 co-authored with Claude) |
+| Database migrations | 26 SQL files |
+| Unit test files | 19 |
+| Languages in the app | 8 |
+| Platforms | Android, iOS, web, from one codebase |
+
+**How I worked with the AI**
+- **Specs before code.** I had a requirements doc (SRS), high- and low-level design docs, and a roadmap written first, then built against them phase by phase.
+- **Big decisions stayed mine.** For example, I moved the app from local-only storage to a Supabase cloud backend so it could sync between the phone and the web. I also turned down bundling bank logos because of trademark risk.
+- **I checked the work instead of trusting it.** Features were tried out in the browser and on my phone through installable builds. Money-handling code has its own unit tests, and real-time sync was checked with two devices open side by side.
+- **Guardrails for the agent.** A rules file in the project tells the agent how to work, e.g. "money is always stored as whole cents."
+
 ## Try it
 
 | Platform | Link |
 |---|---|
 | Web | **[fintrack-phi-eight.vercel.app](https://fintrack-phi-eight.vercel.app)** |
-| Android | APK coming soon on the [Releases page](../../releases) |
+| Android | **[Download the latest APK](../../releases/latest)** |
 
 Sign up with email/password or Google. Your data syncs between the app and the website.
 
